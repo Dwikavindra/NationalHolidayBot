@@ -17,7 +17,7 @@ public class main extends ListenerAdapter {
     public static JDABuilder builder;
 
     public static void main(String[] args) throws LoginException {
-        String token = "ODUyNDc5MTcxNjA3MTM0MjE4.YMHbGA.hISM9ZILfpSRKzx8X18iMDA2lcA";
+        String token = System.getenv("TOKEN");
         builder = JDABuilder.createDefault(token);
         builder.addEventListeners(new main());
         builder.build();
